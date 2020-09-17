@@ -1,12 +1,15 @@
+@import "./config/reset";
+@import "./config/variables";
+@import "./config/mixins";
+
+
 @import "./components/navigation";
 @import "./components/header";
 @import "./components/main";
 @import "./components/aside";
 @import "./components/footer";
 
-@import "./config/mixins";
-@import "./config/reset";
-@import "./config/variables";
+
 
 *{
     box-sizing: border-box;
@@ -22,13 +25,55 @@ ul{
   list-style-type: none;
 }
 
-.wrapper {
+/*.wrapper {
+    position: relative;
+    width: 95%;
     max-width: 1280px;
     display: flex; 
+    margin: 0 auto;
     background-color: #EAEAEA; 
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 70px;
+    
 
+}
+.container--inner {
+    width: 100%;
+    max-width: 271px;
+    height: 841px;
 
+    @media screen and (max-width: 590px) {
+        min-width: 100%;
+    }
+}/*
 
 /*font-family: 'Dancing Script', cursive;
 font-family: 'Lato', sans-serif;*/
+.wrapper {
+    position: relative;
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100vh;
+    
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 20px;
+
+    
+}
+
+.container--inner {
+    width: 100%;
+    max-width: 271px;
+    height: 841px;
+
+}

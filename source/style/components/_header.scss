@@ -2,7 +2,9 @@
 @import "../config/variables";
 
 .header{
-  /*height: 169px;*/
+  width: 100%;
+  min-width: 320px;
+  height: 169px;
 }
 
 
@@ -49,6 +51,18 @@
   background-color: #ffffff;
   margin-right: 1px;
   
+}
+.figure_round::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+
 }
 .user__input {
   margin: 0 auto;
@@ -164,8 +178,27 @@ input::placeholder {
       text-decoration:none ;
     }
 }
+.triangle--red {
+  display: flex;
+      @include font;
+      font-weight: 700;
+      font-size: 12px;
+      color: #BFBFBF;
+      margin-left: 5px;
+}
 
-
-
+.triangle--red:after {
+  content: '';
+  position: absolute;
+  left: 133px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 6px solid #A889E9;
+  margin: 2px;
+}
+.st {
+  display: flex;
+  
+}
 
 

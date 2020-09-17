@@ -3,50 +3,62 @@
 @import "../config/variables";
 
 .nav {
-    width: 74px;
-    height: 1000px;
     display: flex;
     flex-direction: column;
-
-&__logo {
-    @include flex;
-    flex-direction: column;
-    width: 70px;
-    height: 71px;
-    background-color:#F6F6F6;
-    z-index: 10;
-    box-shadow:  5px 0 5px rgba(194, 188, 188, 0.8);
-}
-&__menu {
-    height: 929px;
-    width: 70px;
+    width: 74px;
+    height: 1000px;
     background:$primary-color;
-   
-}
-&__link {
-    @include flex;
-    @include font;
-    flex-direction: column;
-    font-size: 10px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-&__link--button{
-    margin-top: 509px;
-    
-}
-&__img {
-    padding-bottom: 10px;
-    padding-top: 29px;
-}
 
-}
-
-.nav__link--logo {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 400;
-    font-size: 30px;
-   background:$primary-color;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    &__link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 70px;
+        min-height: 70px;
+        padding-bottom: 10px;
+        font-size: 11px;
+        color: #fff;
+        text-decoration: none;
+    }
+    &__link:first-child {
+        font-family: 'Dancing Script', cursive;
+        align-items: center;
+        font-size: 35px;
+        color: #fc6863;
+        background-color: #fff;
+        box-shadow: -1px 1px 5px 5px rgba(194, 188, 188, 0.8);
+    }
+    &__link:last-child {
+        margin-top: auto;
+        background: url(../img/nav/power.png) no-repeat center;
+    }  
+    &__link--home {
+        background: url(../img/nav/home.png) no-repeat center 10px ;
+        margin-top: 29px;
+        }
+    &__link--statistics {
+        background: url(../img/nav/statistics.png) no-repeat center 10px;
+        }
+    &__link--user {
+        background: url(../img/nav/user.png) no-repeat center 10px;
+        }    
+    &__link--settings {
+        background: url(../img/nav/settings.png) no-repeat center 10px;
+        }           
+    &__link--quires {
+        background: url(../img/nav/quires.png) no-repeat center ;
+        }      
+    }
+    .nav__link:hover:nth-child(1n + 2):after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 70px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 8px solid #fc6863;
+        
+    } 

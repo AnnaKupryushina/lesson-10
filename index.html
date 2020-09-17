@@ -8,41 +8,30 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./source/style/main.css">
-    <title>Document</title>
+    <title>Dashboard</title>
 </head>
 
 <body>
     <div class="wrapper">
         <nav class="nav">
-            <div class="nav__logo">
-                <a href="#" class="nav__link nav__link--logo">W</a>
-            </div>
-            <div class="nav__menu">
-                <a href="#" class="nav__link">
-                    <img src="./source/img/nav/home.png" alt="home" class="nav__img" />Home</a>
-                <a href="#" class="nav__link">
-                    <img src="./source/img/nav/stactics.png" alt="stactics" class="nav__img" />Stactics</a>
-                <a href="#" class="nav__link">
-                    <img src="./source/img/nav/user.png" alt="user" class="nav__img" /> User</a>
-                <a href="#" class="nav__link">
-                    <img src="./source/img/nav/settings.png" alt="settings" class="nav__img" />Settings</a>
-                <a href="#" class="nav__link">
-                    <img src="./source/img/nav/quires.png" alt="queries" class="nav__img" />Queries</a>
-                <a href="#" class="nav__link nav__link--button">
-                    <img src="./source/img/nav/power.png" alt="power" class="nav__img" /></a>
-            </div>
-            <!--./ nav menu-->
+            <a href="#" class="nav__link nav__logo">W</a>
+            <a href="#" class="nav__link nav__link--home">Home</a>
+            <a href="#" class="nav__link nav__link--statistics">Statistics</a>
+            <a href="#" class="nav__link nav__link--user"> User</a>
+            <a href="#" class="nav__link nav__link--settings">Settings</a>
+            <a href="#" class="nav__link nav__link--quires">Quires</a>
+            <a href="#" class="nav__link"></a>
         </nav>
-        <div class="content">
+        <div class="container">
             <header class="header">
                 <div class="user">
                     <div class="user__item">
                         <a href="#">
-                            <div class="user__figure">
-                                <div class="figure__round"></div>
-                                <div class="figure__round"></div>
-                                <div class="figure__round"></div>
-                            </div>
+                            <ul class="user__figure">
+                                <li class="figure__round"></li>
+                                <li class="figure__round"></li>
+                                <li class="figure__round"></li>
+                            </ul>
                             <!--./header figure-->
                         </a>
                     </div>
@@ -97,8 +86,10 @@
                     <div class="statics__block">
                         <h4 class="statics__title">Daily Visitors</h4>
                         <p class="statics__number">150,0000</p>
-                        <p class="statics__count"> <img src="./source/img/header/triangle.png" alt="triangle"> 1020
-                            <img src="./source/img/header/triangle-red.png" alt="triangle"> 1020</p>
+                        <ul class="st">
+                            <li class="triangle--blue">1020</li>
+                            <li class="triangle--red">1020</li>
+                        </ul>
                     </div>
                     <div class="statics__block">
                         <h4 class="statics__title">Daily Customers</h4>
@@ -168,20 +159,20 @@
                                 <div>
                                     <img class="chart__img" src="./source/img/main/chart.png" alt="">
                                 </div>
-                                <div class="chart__months">
-                                    <p class="months__item">Jan</p>
-                                    <p class="months__item">Feb</p>
-                                    <p class="months__item">Mar</p>
-                                    <p class="months__item">Apr</p>
-                                    <p class="months__item">May</p>
-                                    <p class="months__item">Jun</p>
-                                    <p class="months__item">Jul</p>
-                                    <p class="months__item">Aug</p>
-                                    <p class="months__item">Sep</p>
-                                    <p class="months__item">Oct</p>
-                                    <p class="months__item">Nov</p>
-                                    <p class="months__item">Doc</p>
-                                </div>
+                                <ul class="chart__months">
+                                    <li class="months__item">Jan</li>
+                                    <li class="months__item">Feb</li>
+                                    <li class="months__item">Mar</li>
+                                    <li class="months__item">Apr</li>
+                                    <li class="months__item">May</li>
+                                    <li class="months__item">Jun</li>
+                                    <li class="months__item">Jul</li>
+                                    <li class="months__item">Aug</li>
+                                    <li class="months__item">Sep</li>
+                                    <li class="months__item">Oct</li>
+                                    <li class="months__item">Nov</li>
+                                    <li class="months__item">Doc</li>
+                                </ul>
                             </div>
                             <!--./ item-->
                         </div>
@@ -322,7 +313,8 @@
                                 <p class="progress__sum">&#36;150,0000</p>
                                 <p class="progress__count">
                                     <img src="./source/img/header/triangle.png" alt="triangle"> 1020
-                                    <img class="progress__img" src="./source/img/header/triangle-red.png" alt="triangle"> 1020
+                                    <img class="progress__img" src="./source/img/header/triangle-red.png"
+                                        alt="triangle"> 1020
                                 </p>
                             </div>
                             <!--./ progress-->
@@ -348,117 +340,118 @@
                 <!--./ section-->
             </main>
             <!--./ main-->
+            <div class="container__inner">
+                <aside class="aside">
+                    <div class="aside__list">
+                        <button class="aside__button">
+                            <img class="aside__icons" src="./source/img/aside/users.png" alt="users">
+                        </button>
+                        <button class="aside__button">
+                            <img class="aside__icons" src="./source/img/aside/chat.png" alt="chat">
+                        </button>
+                        <button class="aside__button">
+                            <img class="aside__icons" src="./source/img/aside/like.png" alt="like">
+                        </button>
+                    </div>
+                    <!--./aside list-->
+                    <div class="aside__section">
+                        <img class="aside__img" src="./source/img/aside/lawrence.png" alt="lawrence">
+                        <div aside__info>
+                            <p class="aside__name">Jennifer Lawrence</p>
+                            <p class="aside__role">Cheif Authority</p>
+                        </div>
+                        <a href="#"><img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat"></a>
+                    </div>
+                    <!--./aside section-->
+                    <hr class="aside__line">
+                    <div class="aside__section">
+                        <img class="aside__img" src="./source/img/aside/pitt.png" alt="pitt">
+                        <div aside__info>
+                            <p class="aside__name">Brad Pitt</p>
+                            <p class="aside__role">Cheif Authority</p>
+                        </div>
+                        <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
+                    </div>
+                    <!--./aside section-->
+                    <hr class="aside__line">
+                    <div class="aside__section">
+                        <img class="aside__img" src="./source/img/aside/dicaprio.png" alt="dicaprio">
+                        <div aside__info>
+                            <p class="aside__name">Leonardo Dicaprio</p>
+                            <p class="aside__role">Cheif Authority</p>
+                        </div>
+                        <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
+                    </div>
+                    <!--./aside section-->
+                    <hr class="aside__line">
+                    <div class="aside__section">
+                        <img class="aside__img" src="./source/img/aside/eisenberg.png" alt="eisenberg">
+                        <div aside__info>
+                            <p class="aside__name">Jesse Eisenberg</p>
+                            <p class="aside__role">Cheif Authority</p>
+                        </div>
+                        <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
+                    </div>
+                    <!--./aside section-->
+                    <hr class="aside__line">
+                    <div class="aside__section">
+                        <img class="aside__img" src="./source/img/aside/stewart.png" alt="stewart">
+                        <div aside__info>
+                            <p class="aside__name">kristen Stewart</p>
+                            <p class="aside__role">Cheif Authority</p>
+                        </div>
+                        <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
+                    </div>
+                    <!--./aside section-->
+                    <hr class="aside__line">
+                    <div class="aside__section">
+                        <img class="aside__img" src="./source/img/aside/affleck.png" alt="affleck">
+                        <div aside__info>
+                            <p class="aside__name">Ben Affleck</p>
+                            <p class="aside__role">Cheif Authority</p>
+                        </div>
+                        <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
+                    </div>
+                    <!--./aside section-->
+                    <hr class="aside__line">
+                    <div class="aside__section">
+                        <img class="aside__img" src="./source/img/aside/jacknicholson.png" alt="nicholson">
+                        <div aside__info>
+                            <p class="aside__name">Jack Nicholson</p>
+                            <p class="aside__role">Cheif Authority</p>
+                        </div>
+                        <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
+                    </div>
+                    <!--./aside section-->
+                    <hr class="aside__line">
+                    <input class="aside__input" type="text" placeholder="Search Peoples, Chats and Reviews">
+                    <a href="#">
+                        <img class="aside__zoom" src="./source/img/aside/zoom.png" alt="zoom">
+                        <img src="./source/img/aside/edit.png" alt="edit">
+                    </a>
+                    <hr class="aside__line">
+                </aside>
+                <footer class="footer">
+                    <h2 class="footer__title">Featured Companys</h2>
+                    <div class="footer__companys">
+                        <a href="#" class="footer__link footer__link--rdio"><img src="./source/img/footer/rdio-logo.png"
+                                alt="rdio-logo"></a>
+                        <a href="#" class="footer__link footer__link--css"><img src="./source/img/footer/css-3.png"
+                                alt="css3-logo"></a>
+                        <a href="#" class="footer__link footer__link--deviantart"><img
+                                src="./source/img/footer/deviantart.png" alt="deviantart"></a>
+                        <a href="#" class="footer__link footer__link--xing"><img src="./source/img/footer/xing-logo.png"
+                                alt="xing-logo"></a>
+                        <a href="#" class="footer__link footer__link--vimeo"><img src="./source/img/footer/vimeo.png"
+                                alt="vimeo"></a>
+                        <a href="#" class="footer__link footer__link--vk"><img src="./source/img/footer/vk.png"
+                                alt="vk-logo"></a>
+                    </div>
+                </footer>
+            </div>
+            <!--./container inner-->
         </div>
-        <!--./ content-->
-        <div class="aside__footer">
-            <aside class="aside">
-                <div class="aside__list">
-                    <button class="aside__button">
-                        <img class="aside__icons" src="./source/img/aside/users.png" alt="users">
-                    </button>
-                    <button class="aside__button">
-                        <img class="aside__icons" src="./source/img/aside/chat.png" alt="chat">
-                    </button>
-                    <button class="aside__button">
-                        <img class="aside__icons" src="./source/img/aside/like.png" alt="like">
-                    </button>
-                </div>
-                <!--./aside list-->
-                <div class="aside__section">
-                    <img class="aside__img" src="./source/img/aside/lawrence.png" alt="lawrence">
-                    <div aside__info>
-                        <p class="aside__name">Jennifer Lawrence</p>
-                        <p class="aside__role">Cheif Authority</p>
-                    </div>
-                    <a href="#"><img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat"></a>
-                </div>
-                <!--./aside section-->
-                <hr class="aside__line">
-                <div class="aside__section">
-                    <img class="aside__img" src="./source/img/aside/pitt.png" alt="pitt">
-                    <div aside__info>
-                        <p class="aside__name">Brad Pitt</p>
-                        <p class="aside__role">Cheif Authority</p>
-                    </div>
-                    <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
-                </div>
-                <!--./aside section-->
-                <hr class="aside__line">
-                <div class="aside__section">
-                    <img class="aside__img" src="./source/img/aside/dicaprio.png" alt="dicaprio">
-                    <div aside__info>
-                        <p class="aside__name">Leonardo Dicaprio</p>
-                        <p class="aside__role">Cheif Authority</p>
-                    </div>
-                    <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
-                </div>
-                <!--./aside section-->
-                <hr class="aside__line">
-                <div class="aside__section">
-                    <img class="aside__img" src="./source/img/aside/eisenberg.png" alt="eisenberg">
-                    <div aside__info>
-                        <p class="aside__name">Jesse Eisenberg</p>
-                        <p class="aside__role">Cheif Authority</p>
-                    </div>
-                    <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
-                </div>
-                <!--./aside section-->
-                <hr class="aside__line">
-                <div class="aside__section">
-                    <img class="aside__img" src="./source/img/aside/stewart.png" alt="stewart">
-                    <div aside__info>
-                        <p class="aside__name">kristen Stewart</p>
-                        <p class="aside__role">Cheif Authority</p>
-                    </div>
-                    <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
-                </div>
-                <!--./aside section-->
-                <hr class="aside__line">
-                <div class="aside__section">
-                    <img class="aside__img" src="./source/img/aside/affleck.png" alt="affleck">
-                    <div aside__info>
-                        <p class="aside__name">Ben Affleck</p>
-                        <p class="aside__role">Cheif Authority</p>
-                    </div>
-                    <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
-                </div>
-                <!--./aside section-->
-                <hr class="aside__line">
-                <div class="aside__section">
-                    <img class="aside__img" src="./source/img/aside/jacknicholson.png" alt="nicholson">
-                    <div aside__info>
-                        <p class="aside__name">Jack Nicholson</p>
-                        <p class="aside__role">Cheif Authority</p>
-                    </div>
-                    <img class="aside__chat" src="./source/img/aside/chat copy.png" alt="chat">
-                </div>
-                <!--./aside section-->
-                <hr class="aside__line">
-                <input class="aside__input" type="text" placeholder="Search Peoples, Chats and Reviews">
-                <a href="#">
-                    <img class="aside__zoom" src="./source/img/aside/zoom.png" alt="zoom">
-                    <img src="./source/img/aside/edit.png" alt="edit">
-                </a>
-                <hr class="aside__line">
-            </aside>
-            <footer class="footer">
-                <h2 class="footer__title">Featured Companys</h2>
-                <div class="footer__companys">
-                    <a href="#" class="footer__link footer__link--rdio"><img src="./source/img/footer/rdio-logo.png"
-                            alt="rdio-logo"></a>
-                    <a href="#" class="footer__link footer__link--css"><img src="./source/img/footer/css-3.png"
-                            alt="css3-logo"></a>
-                    <a href="#" class="footer__link footer__link--deviantart"><img src="./source/img/footer/deviantart.png"
-                            alt="deviantart"></a>
-                    <a href="#" class="footer__link footer__link--xing"><img src="./source/img/footer/xing-logo.png"
-                            alt="xing-logo"></a>
-                    <a href="#" class="footer__link footer__link--vimeo"><img src="./source/img/footer/vimeo.png"
-                            alt="vimeo"></a>
-                    <a href="#" class="footer__link footer__link--vk"><img src="./source/img/footer/vk.png" alt="vk-logo"></a>
-                </div>
-            </footer>
-        </div>
-        <!--./aside footer-->
+        <!--./ container-->
     </div>
     <!--./ wrapper-->
 </body>
