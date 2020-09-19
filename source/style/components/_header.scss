@@ -7,7 +7,6 @@
   height: 169px;
 }
 
-
 /* Header user
 ==========================================*/
 .user {
@@ -22,17 +21,9 @@
       height: 71px;
       border-right:1px solid #F1F1F1 ;
 }  
-    &__item--left {
-      @include flex;
-      width: 60px;
-      height: 71px;
+    &__item--upload {
       border-left:1px solid #F1F1F1 ;
     }  
-    &__img--left {
-      display: flex;
-      width: 71px;
-      height: 71px;
-    }
   }
   
 .user__figure {
@@ -44,25 +35,31 @@
   justify-content: center;
   align-items: center;
 }
+
 .figure__round {
+  position: relative;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: #ffffff;
-  margin-right: 1px;
-  
 }
-.figure_round::after {
+.figure__round::after {
   content: '';
   position: absolute;
-  top: 10px;
-  left: 5px;
+  left: 7px;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: #ffffff;
-
-
+}
+.figure__round::before {
+  content: '';
+  position: absolute;
+  right: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 .user__input {
   margin: 0 auto;
@@ -77,28 +74,23 @@
   background-color:#f3edede0;
   text-overflow: ellipsis;
   outline: none;
-
 }
 
 input::placeholder {
   @include font;
   color: #C8C8C8;
   font-size: 0.8em;
- 
 }
-
 .input__img {
   z-index: 10;
   position: relative;
   right: 35px;
-  
 }
 .user__info {
   display: flex;
-  margin-left: 20px;
+  margin-left: 10px;
   flex-direction: column;
-  width: 174px;
-  height: 70px;
+  width: 105px;
 }
 .info__name {
   padding-top: 22px;
@@ -109,7 +101,6 @@ input::placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 13px;
-
 }
 .info__role {
   @include font;
@@ -118,27 +109,50 @@ input::placeholder {
 
 }
 .user__settings {
+  width: 60px;
+  height: 60px;
   @include flex;
   flex-direction: column;
-  margin-right: 18px;
+ 
 }
-.settings__round {
-  margin-bottom: 3px;
+.settings__circles {
+  @include flex;
+  flex-direction: column;
+  position: relative;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color:#BFBFBF;
 }
+.settings__circles::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color:#BFBFBF;
+}
+.settings__circles::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color:#BFBFBF;
 
-/* Header statics
+}
+
+/* Header statistics
 ==========================================*/
-.statics {
-    width: 1298px;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 22px;
-    padding-top: 22px;
-    background-color: #FFFFFF;
+.statistics {
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 22px;
+  padding-top: 22px;
+  background-color: #FFFFFF;
 
     &__block {
       @include flex;
@@ -175,30 +189,56 @@ input::placeholder {
       -webkit-text-fill-color: transparent;
     }
     &__link {
-      text-decoration:none ;
-    }
-}
-.triangle--red {
-  display: flex;
       @include font;
       font-weight: 700;
       font-size: 12px;
-      color: #BFBFBF;
-      margin-left: 5px;
+      background:$primary-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration:none ;
+    }
+}
+
+.statistics__list {
+  display: flex; 
+}
+
+.triangle--blue {
+  position: relative;
+  display: flex;
+  @include font;
+  font-weight: 700;
+  font-size: 12px;
+  color: #BFBFBF;
+  margin-left: 5px;
+}
+
+.triangle--blue:after {
+  content: '';
+  position: absolute;
+  right: 28px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 6px solid #A889E9;
+  margin: 4px;
+}
+
+.triangle--red {
+  position: relative;
+  display: flex;
+  @include font;
+  font-weight: 700;
+  font-size: 12px;
+  color: #BFBFBF;
+  margin-left: 10px;
 }
 
 .triangle--red:after {
   content: '';
   position: absolute;
-  left: 133px;
+  right: 25px;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  border-bottom: 6px solid #A889E9;
-  margin: 2px;
+  border-top: 6px solid #fa3646;
+  margin: 4px;
 }
-.st {
-  display: flex;
-  
-}
-
-
