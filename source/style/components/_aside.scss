@@ -22,8 +22,8 @@
     }
     &__section {
         @include flex;
-       justify-content: space-around;
-        
+        justify-content: space-around;
+       
     }
     &__img {
         width: 42px;
@@ -69,7 +69,7 @@
 
 }
 
-.aside__button:hover:nth-child(1n+ 1):after {
+.aside__button:hover:nth-child(1n + 1):after {
         content: "";
         position: absolute;
         top: 216px;

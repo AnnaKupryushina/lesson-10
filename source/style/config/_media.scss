@@ -1,27 +1,30 @@
-// Small devices
-@mixin sm {
-    @media (max-width: #{$screen-sm-max}) {
-        @content;
-    }
-}
 
-// Medium devices
-@mixin md {
-    @media (max-width: #{$screen-md-max}) {
-        @content;
-    }
-}
+    @media 
+	(max-width: 768px) {
+        .container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;   
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; 
+        }
 
-// Large devices
-@mixin lg {
-    @media (max-width: #{$screen-lg-max}) {
-        @content;
-    }
-}
+        .statistics__block {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; 
+        }
+        .container__inner {
+            max-width: 768px;
+            width: 100%;
+        }
 
-// Extra large devices
-@mixin xl {
-    @media (max-width: #{$screen-xl-max}) {
-        @content;
     }
-}
+
+
+
+
+

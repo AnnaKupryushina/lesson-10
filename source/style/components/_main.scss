@@ -1,6 +1,10 @@
-@import "../config/mixins";
-@import "../config/variables";
-
+.main {
+    flex: auto;
+    min-width: 320px;
+    max-width: 989px;
+    height: 841px;
+  
+}
 .section {
     display: flex;
 }
@@ -110,6 +114,7 @@
     }
     
     &__count {
+        @include flex;
         @include font-chart;
     }
     &__sum {
@@ -176,7 +181,12 @@
         @include font-chart;
         font-weight: 300;
         color: #777777;
-        margin: 21px 23px 18px 24px ; 
+        margin: 21px 23px 18px 24px ;
+        
+    }
+    &__name {
+       @include font-chart;
+       color: #000000; 
     }
 }
 
@@ -184,31 +194,28 @@
 =========================================*/
 
 .task {
-    width: 501px;
+    max-width: 521px;
+    min-height: 275px;
     margin-left: 20px;
     margin-top: 19px;
+    margin-bottom: 30px;
     background-color:#FFFFFF;
 
     &__title {
+        width: 365px;
+        height: 50px;
         @include font-chart;
         color: #777777; 
-        font-size: 14px; 
-        margin-left: 32px;
+        font-size: 14px;
+        margin:0 0 20px 32px;
         padding-top: 31px;
+        border-bottom: 1px solid #faf0f0;
     }
-    &__line {
-        width: 441px;
-        height: 1px;
-        margin-left: 30px;
-        margin-top: 20px;
-        background-color:#e2dbdb;
-        border: none;
-        margin-bottom: 15px;
-    }
+   
     &__text {
         @include font-chart;
         font-weight: 400;
-        margin-left: 20px; 
+        margin-left: 15px; 
     }
     &__time {
         @include font-chart;
@@ -219,7 +226,15 @@
        margin-left: 50px; 
       
     }
+    &__position {
+        height: 40px;
+        width: 475px;
+        padding-top: 10px;
+        margin-left: 10px;
+        border-bottom: 1px solid #faf0f0;
+    }
 }
+
 .checkbox input {
 	visibility: hidden;	
 }
@@ -287,14 +302,9 @@
     }
 
     &__graph {
-        display: flex;
-        align-items: flex-end;
         margin-left: 10px;
         margin-top: 29px;
-        width: 11px;
-        height: 88px;
         border-radius: 20px;
-        background-color: #BFBFBF;
     }
     &__count {
         @include flex;
@@ -307,22 +317,26 @@
    }
     &__part{
         width: 11px;
-        height: 47px;
+        height: 55px;
         border-radius: 20px;
         background-image:linear-gradient(to top, #1845e7, #64158f);
-
+              
             &--big {
-                 width: 11px;
-                 height: 61px;
+                width: 11px;
+                height: 61px;
+                background-image:linear-gradient(to top, #1845e7, #64158f);
             }
             &--small {
                 width: 11px;
                 height: 41px;
+                background-image:linear-gradient(to top, #1845e7, #64158f);
         }
     }
 }
-.graph{
-   @include flex; 
+.graph {
+    @include flex;
+    align-items: flex-end;
+   
 }
 
 /* Shipments
@@ -347,7 +361,7 @@
     &__numbers {
         display: flex;
         justify-content: space-around;
-        margin-top: 10px;
+        margin-bottom: 21px;
         @include font-chart;
     }
     &__sum {
@@ -358,7 +372,8 @@
       -webkit-text-fill-color: transparent;  
     }
     &__count {
-        margin-top: 8px;
+        padding-top: 7px;
+        display: flex;
     }
 
 }

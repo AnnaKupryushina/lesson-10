@@ -3,11 +3,17 @@
 @import "../config/variables";
 
 .nav {
+    position: fixed;
+    top: 0;
     display: flex;
     flex-direction: column;
-    width: 74px;
-    height: 1000px;
+    height: 100vh;
+    width: 70px;
     background:$primary-color;
+    
+    @include md {
+        display: none;
+    }
 
     &__link {
         position: relative;
